@@ -1,3 +1,19 @@
 h1 {
-    font-family: "さわらび明朝";
+    color:rgb(0, 165, 170);
+    padding-left: 80px;
+    border-bottom: 2px solid black;
 }
+
+h2.st {
+    color:black;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+p.stt {
+    text-align: center;
+    word-break: normal;
+    padding-bottom: 50px;
+}
+
