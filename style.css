@@ -4,11 +4,11 @@ h1 {
     border-bottom: 2px solid black;
 }
 
-h2.st {
+.st {
     color:black;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration: 5px underline;
+    text-decoration-color: rgb(255, 0, 0);
 }
 
 p.stt {
@@ -17,3 +17,30 @@ p.stt {
     padding-bottom: 50px;
 }
 
+.v1 {
+    position: relative;
+    left: 10%;
+}
+
+.v2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+.v2::before,
+.v2::after {
+    content:'';
+    width: 3px;
+    height: 40px;
+    background-color: rgb(0, 17, 255);
+}
+.v2::before {
+    margin-right: 30px;
+    transform: rotate(-35deg);
+}
+.v2::after {
+    margin-left: 30px;
+    transform: rotate(35deg);
+}
