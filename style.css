@@ -42,14 +42,4 @@ dt, dd, p {
 
 .stt, .w2 {
     margin-left: 20px;
-    color: #555;
-}
-
-a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
