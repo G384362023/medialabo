@@ -201,9 +201,13 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 
-mise_data()
-mise_data()
+mise_data(0);
+mise_data(1);
 
-function mise_data() {
-  console.log(data.results);
+function mise_data(i) {
+  console.log(data.results.shop[i].name);
+  console.log(data.results.shop[i].station_name);
+  console.log(data.results.shop[i].address);
+  console.log(data.results.shop[i].budget.name);
+  console.log(data.results.shop[i].open);
 }
