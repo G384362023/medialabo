@@ -13,30 +13,40 @@ hantei();
 hantei();
 hantei();
 
+
+
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let yoso = 4;
+  let kai = document.querySelector('span#kaisu');
+  let ans = document.querySelector('span#answer');
+  let res = document.querySelector('p#result');
+  kai.textContent=kaisu;
 
   console.log(kaisu+'回目の予想: '+yoso);
   if(kaisu<4){
     if(kotae===yoso){
-        console.log('正解です. おめでとう!');
-        kaisu = kaisu+4-kaisu;
+        res.textContent='正解です. おめでとう!';
+        kaisu = 1;
     }
     else if(kotae!=yoso && kaisu>2){
-        console.log('まちがい. 残念でした答えは'+kotae+'です.');
+        res.textContent='まちがい. 残念でした答えは'+kotae+'です.';
+        kaisu = kaisu + 1;
     }
     else if(kotae>=yoso){
-        console.log('まちがい. 答えはもっと大きいですよ.');
+        res.textContent='まちがい. 答えはもっと大きいですよ.';
+        kaisu = kaisu + 1;
     }
     else if(kotae<=yoso){
-        console.log('まちがい. 答えはもっと小さいですよ.')
+        res.textContent='まちがい. 答えはもっと小さいですよ.';
+        kaisu = kaisu + 1;
     }
   }
   else{
-    console.log('答えは'+kotae+'でした. すでにゲームは終わってます.')
+    res.textContent='答えは'+kotae+'でした. すでにゲームは終わってます.';
   }
+  
+  
 
-  kaisu = kaisu + 1;
 }
