@@ -24,12 +24,12 @@ function hantei() {
   ans.textContent = yoso;
 
   console.log(kaisu+'回目の予想: '+yoso);
-  if(kaisu<5){
+  if(kaisu<4){
     if(kotae==yoso){
         res.textContent='正解です. おめでとう!';
-        kaisu += 4;
+        kaisu += 3;
     }
-    else if(kotae!=yoso && kaisu>3){
+    else if(kotae!=yoso && kaisu>2){
         res.textContent='まちがい. 残念でした答えは'+kotae+'です.';
         kaisu = kaisu + 1;
     }

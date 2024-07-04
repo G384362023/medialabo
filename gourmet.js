@@ -201,11 +201,13 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 let kazu=0;
-
-
 let kekka = 1;
-mise_data(0);
-mise_data(1);
+
+let b = document.querySelector('#print');
+b.addEventListener('click',mise_data);
+
+
+
 let div = document.querySelector("div#result");
 let p = document.createElement('p');
 let h3 = document.createElement('h3');
@@ -213,13 +215,19 @@ div.insertAdjacentElement('beforebegin',p);
 p.insertAdjacentElement('beforeend',h3);
 h3.textContent = 'グルメ情報(検索結果は'+kazu+'件です)';
 
-function mise_data(i) {
-  
-  let div = document.querySelector("div#result");
+function mise_data() {
+  let v = document.querySelector('input[name="srch"]');
+  let serch = v.value;
+  console.log('検索キー:'+serch);
+
+
+  div = document.querySelector("div#result");
 
   let li = document.createElement('li');
+  if(false){
   li.textContent = '検索結果'+kekka+'件目';
   div.insertAdjacentElement('beforeend',li);
+  
   let table = document.createElement("table");
   div.insertAdjacentElement('beforeend',table);
   
@@ -285,4 +293,5 @@ function mise_data(i) {
 
   kekka++;
   kazu++;
+  }
 }
