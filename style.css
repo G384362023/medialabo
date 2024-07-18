@@ -1,25 +1,28 @@
-.collapsible {
-    cursor: pointer;
-    }
-    .content {
-    display: none;
-    padding-left: 20px;
-    }
-    .back-to-top {
+html {
+    scroll-behavior: smooth;
+    min-height:200vh
+}
+
+#top {
+    background-color: aquamarine;
+}
+
+#page_top {
+    font-size: large;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #00ba1c85;
-    color: white;
-    border: none;
-    padding: 10px 15px; 
-    cursor: pointer;
-    border-radius: 60px;
-    text-align: center;
-    font-size: 16px;
-    }
-    .back-to-top:hover {
-    background-color: #00ba1c85;
+    padding: 20px 25px;
+    background-color: #34db9e;
+    color: #ffffff;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+#page_top.is_active {
+    opacity: 1;
 }
 
 body {
